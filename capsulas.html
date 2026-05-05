@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cápsulas - MenteActiva</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dashboard-body">
+
+    <div class="header-dash">
+        <div class="logo">
+            <h2><i class="fa-solid fa-lightbulb"></i> Cápsulas de Motivación</h2>
+        </div>
+        <div class="user-menu">
+            <a href="{{ url_for('dashboard') }}" class="btn-cerrar" style="background-color: #7f8c8d;"><i class="fa-solid fa-arrow-left"></i> Volver al Panel</a>
+        </div>
+    </div>
+
+    <div class="dashboard-container">
+        <h2 class="dash-title">Un respiro para tu mente</h2>
+        
+        <div class="grid-funciones">
+
+            <div class="card-func" style="border-top-color: #f1c40f;">
+                <i class="fa-solid fa-quote-left" style="color: #f1c40f;"></i>
+                <h3>El primer paso</h3>
+                <p>"No tienes que ser grande para empezar, pero tienes que empezar para ser grande."</p>
+            </div>
+
+            <div class="card-func" style="border-top-color: #2ecc71;">
+                <i class="fa-solid fa-headphones" style="color: #2ecc71;"></i>
+                <h3>Audio: Relax de 2 min</h3>
+                <p>Cierra los ojos, respira profundo y escucha este sonido relajante antes de estudiar.</p>
+                <button class="btn-dash" style="background-color: #2ecc71; margin-top: 10px;"><i class="fa-solid fa-play"></i> Reproducir</button>
+            </div>
+
+            <div class="card-func" style="border-top-color: #9b59b6;">
+                <i class="fa-solid fa-seedling" style="color: #9b59b6;"></i>
+                <h3>Crecimiento</h3>
+                <p>"El fracaso no es lo opuesto al éxito, es parte del éxito. Un mal examen no te define."</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

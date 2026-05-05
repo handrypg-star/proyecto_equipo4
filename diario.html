@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Diario de Emociones - MenteActiva</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dashboard-body">
+
+    <div class="header-dash">
+        <div class="logo">
+            <h2><i class="fa-solid fa-book-journal-whills"></i> Diario de Emociones</h2>
+        </div>
+        <div class="user-menu">
+            <a href="{{ url_for('dashboard') }}" class="btn-cerrar" style="background-color: #7f8c8d;"><i class="fa-solid fa-arrow-left"></i> Volver al Panel</a>
+        </div>
+    </div>
+
+    <div class="dashboard-container">
+        <div class="form-container">
+            <h2 class="dash-title" style="margin-bottom: 20px;">¿Cómo te sientes hoy, {{ usuario }}?</h2>
+            
+            <form action="#" method="POST" class="registro-form">
+                <div class="input-group">
+                    <label>Emoción principal:</label>
+                    <select class="emocion-select">
+                        <option value="motivado">🌟 Motivado/a</option>
+                        <option value="calmado">😌 Calmado/a</option>
+                        <option value="estresado">😰 Estresado/a</option>
+                        <option value="triste">🌧️ Triste o Desanimado/a</option>
+                        <option value="ansioso">🌪️ Ansioso/a</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>Escribe un poco sobre tu día (opcional):</label>
+                    <textarea rows="5" placeholder="Hoy me sentí abrumado por el examen de programación, pero logré avanzar..."></textarea>
+                </div>
+
+                <div class="button-login">
+                    <button type="button">Guardar Registro</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

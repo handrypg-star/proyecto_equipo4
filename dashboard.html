@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - MenteActiva</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dashboard-body">
+    
+    <div class="header-dash">
+        <div class="logo">
+            <h2><i class="fa-solid fa-brain"></i> MenteActiva</h2>
+        </div>
+        <div class="user-menu">
+            <span>Hola, {{ usuario }}</span>
+            <a href="{{ url_for('logout') }}" class="btn-cerrar"><i class="fa-solid fa-right-from-bracket"></i> Salir</a>
+        </div>
+    </div>
+
+    <div class="dashboard-container">
+        <h2 class="dash-title">Tu Panel de Bienestar Estudiantil</h2>
+        
+        <div class="grid-funciones">
+            
+            <div class="card-func">
+                <i class="fa-solid fa-face-smile"></i>
+                <h3>Diario de Emociones</h3>
+                <p>Registra tu estado de ánimo diario para identificar patrones y mejorar tu enfoque.</p>
+                <a href="{{ url_for('diario') }}" class="btn-dash" style="display:block; text-decoration:none;">Registrar hoy</a>
+            </div>
+
+            <div class="card-func">
+                <i class="fa-solid fa-lightbulb"></i>
+                <h3>Cápsulas de Motivación</h3>
+                <p>Escucha audios cortos o lee reflexiones para recargar tu energía antes de estudiar.</p>
+                <a href="{{ url_for('capsulas') }}" class="btn-dash" style="display:block; text-decoration:none;">Ver cápsulas</a>
+            </div>
+
+            <div class="card-func">
+                <i class="fa-solid fa-list-check"></i>
+                <h3>Micro-Metas</h3>
+                <p>Divide tus trabajos grandes en tareas pequeñas. Cada paso cuenta como una victoria.</p>
+                <button class="btn-dash">Mis tareas</button>
+            </div>
+
+            <div class="card-func">
+                <i class="fa-solid fa-temperature-half"></i>
+                <h3>Termómetro de Estrés</h3>
+                <p>Responde 3 preguntas rápidas para medir tu nivel de carga académica y recibir tips.</p>
+                <button class="btn-dash">Hacer test</button>
+            </div>
+
+            <div class="card-func">
+                <i class="fa-solid fa-user-doctor"></i>
+                <h3>Agendar Asesoría</h3>
+                <p>¿Te sientes abrumado? Agenda una sesión breve con el equipo de psicología de la facultad.</p>
+                <button class="btn-dash">Solicitar cita</button>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

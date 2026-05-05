@@ -1,0 +1,208 @@
+/* =========================================
+   1. ESTILOS GENERALES (RESET)
+   ========================================= */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Arial', sans-serif; 
+}
+
+/* El body por defecto está configurado para centrar el Login */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #eef2f5; 
+}
+
+/* =========================================
+   2. ESTILOS DEL LOGIN (login.html)
+   ========================================= */
+.login-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 350px;
+}
+
+.header { text-align: center; margin-bottom: 25px; }
+.header h1 { color: #2c3e50; font-size: 28px; }
+.header p { color: #7f8c8d; font-size: 14px; font-style: italic; margin-top: 5px; }
+
+h2 { text-align: center; color: #34495e; margin-bottom: 20px; font-size: 20px; }
+
+.input-group { display: flex; flex-direction: column; margin-bottom: 15px; }
+.input-group label { font-weight: bold; color: #34495e; margin-bottom: 5px; font-size: 14px; }
+.input-group input {
+    padding: 10px; border: 1px solid #bdc3c7; border-radius: 6px; font-size: 16px; width: 100%; outline: none;
+}
+.input-group input:focus { border-color: #3498db; }
+
+.button-login { display: flex; justify-content: center; margin-top: 20px; }
+.button-login button {
+    background-color: #3498db; color: white; border: none; padding: 12px 20px;
+    border-radius: 8px; cursor: pointer; font-size: 18px; font-weight: bold; width: 100%; transition: 0.3s;
+}
+.button-login button:hover { background-color: #2980b9; }
+
+/* =========================================
+   3. ESTILOS DEL DASHBOARD Y CÁPSULAS
+   ========================================= */
+/* Esta clase anula el centrado del body para que el dashboard ocupe la pantalla normal */
+.dashboard-body {
+    display: block; 
+    height: auto;
+}
+
+.header-dash {
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-dash h2 {
+    color: white;
+    margin: 0;
+    font-size: 22px;
+}
+
+.user-menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.btn-cerrar {
+    background-color: #e74c3c;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
+
+.btn-cerrar:hover {
+    background-color: #c0392b;
+}
+
+.dashboard-container {
+    padding: 40px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.dash-title {
+    color: #34495e;
+    margin-bottom: 40px;
+    font-size: 26px;
+    text-align: center;
+}
+
+/* Sistema de cuadrícula para las 5 funciones */
+.grid-funciones {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.card-func {
+    background-color: white;
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    border-top: 5px solid #3498db;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-func:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-func i {
+    color: #3498db;
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.card-func h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.card-func p {
+    color: #7f8c8d;
+    font-size: 14px;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.btn-dash {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 0;
+    border-radius: 6px;
+    width: 100%;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+    display: block; /* Ayuda a que los enlaces <a> se comporten como botones */
+    text-decoration: none;
+}
+
+.btn-dash:hover {
+    background-color: #2980b9;
+}
+
+/* =========================================
+   4. ESTILOS PARA EL DIARIO DE EMOCIONES
+   ========================================= */
+.form-container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    max-width: 600px;
+    margin: 0 auto; 
+}
+
+.emocion-select {
+    padding: 12px;
+    border: 1px solid #bdc3c7;
+    border-radius: 6px;
+    font-size: 16px;
+    width: 100%;
+    outline: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+textarea {
+    padding: 12px;
+    border: 1px solid #bdc3c7;
+    border-radius: 6px;
+    font-size: 16px;
+    width: 100%;
+    outline: none;
+    resize: vertical;
+    font-family: 'Arial', sans-serif;
+}
+
+textarea:focus, .emocion-select:focus {
+    border-color: #3498db;
+}

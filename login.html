@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - MenteActiva</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
+</head>
+<body>
+
+    <div class="login-card">
+        <div class="header">
+            <h1>MenteActiva</h1>
+            <p>Tu espacio de enfoque y motivación</p>
+        </div>
+
+        <h2>Iniciar Sesión</h2>
+        
+        <form action="/login" method="post">
+            <div class="input-group">
+                <label for="usuario">Usuario:</label>
+                <input type="text" id="usuario" name="usuario" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="clave">Contraseña:</label>
+                <input type="password" id="clave" name="clave" required>
+            </div>
+
+            <div class="button-login">
+                <button type="submit">Ingresar</button>
+            </div>
+
+            {% if mensaje %}
+                <p style="color: #e74c3c; text-align: center; margin-top: 15px; font-weight: bold;">{{ mensaje }}</p>
+            {% endif %}
+        </form>
+    </div>
+
+</body>
+</html>
